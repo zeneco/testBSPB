@@ -1,6 +1,7 @@
 package com.example.testbspb.pages;
 
 import com.example.testbspb.basestructure.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,8 +19,8 @@ public class MainPage extends BasePage {
     public MainPage(WebDriver driver) {
         super(driver);
     }
-
-    public void hoverOverHeaderDepositsMenu(){
+    @Step("Наведение курсора на пукт меню 'Вклады' и клик по 'Все вклады' ")
+    public void hoverOverDepositsMenu(){
         WebElement depositsMenu = wait.until(ExpectedConditions
                 .visibilityOfElementLocated(headerDepositsMenu));
         new Actions(driver)
